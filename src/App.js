@@ -1,10 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Loginpage from "./components/Loginpage";
 
 function App() {
   return (
     <div className="App">
-      <div className="text-center text-red-600"> h1</div>
+      <Routes>
+        <Route path="/" element={<Loginpage />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} /> */}
+      </Routes>
     </div>
   );
 }
