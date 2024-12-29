@@ -9,7 +9,6 @@ const useUpComingMovies = () => {
   const FetchMovies = async () => {
     const response = await fetch(UpComingMoviesUrl, apiConstant);
     const data = await response.json();
-    console.log(data.results);
     dispatch(addUpComingMovies(data.results));
   };
   useEffect(() => {

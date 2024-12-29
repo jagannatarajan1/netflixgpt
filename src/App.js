@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import { removeUser } from "./utils/userSlice";
 import { useDispatch } from "react-redux";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Loginpage />} />
         <Route path="/browse" element={<Home></Home>} />
+        <Route path="/browse/:searchTerm" element={<MovieDetails />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/*" element={<NotFound />} /> */}
       </Routes>

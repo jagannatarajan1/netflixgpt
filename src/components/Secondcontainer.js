@@ -8,10 +8,7 @@ const Secondcontainer = () => {
   const toprated = useSelector((store) => store.movie.topratedmovies[0]);
   const upcoming = useSelector((store) => store.movie.upcomingmovies[0]);
   if (!movies || !popular || !toprated || !upcoming) return;
-  console.log(movies);
-  console.log(popular);
-  console.log(toprated);
-  console.log(upcoming);
+
   return (
     <div className=" bg-black">
       <div className="lg:-mt-60 pl-9 relative z-20">

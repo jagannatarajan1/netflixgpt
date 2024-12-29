@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { videourl } from "../utils/constant";
 import { apiConstant } from "../utils/constant";
 
-const Videocontainer = () => {
+const Videocontainer = ({ id }) => {
+  const videourl = `https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
   const [finaltrailer, setfinaltrailer] = useState("");
   const fetchvideo = async () => {
     fetch(videourl, apiConstant)
@@ -18,6 +18,7 @@ const Videocontainer = () => {
   };
   useEffect(() => {
     fetchvideo();
+    // eslint-disable-next-line
   }, []);
 
   return (
